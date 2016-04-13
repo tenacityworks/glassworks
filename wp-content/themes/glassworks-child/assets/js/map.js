@@ -61,31 +61,130 @@ function loadMap() {
                 "featureType":"road.highway",
                 "elementType":"geometry.fill",
                 "stylers":[
-                    {"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+                    {"color":"#ffffff"},
+                    {"lightness":17}
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{"color": "#ffffff"},
+                    {"lightness": 29},
+                    {"weight": 0.2}]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#ffffff"},
+                    {"lightness": 18}
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#ffffff"},
+                    {"lightness": 16}
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#f5f5f5"},
+                    {"lightness": 21}]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#dedede"},
+                    {"lightness": 21}
+                ]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {"visibility": "on"},
+                    {"color": "#ffffff"},
+                    {"lightness": 16}
+                ]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {"saturation": 36},
+                    {"color": "#333333"},
+                    {"lightness": 40}
+                ]
+            },
+            {
+                "elementType": "labels.icon",
+                "stylers": [
+                    {"visibility": "off"}
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                    {"color": "#f2f2f2"},
+                    {"lightness": 19}
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {"color": "#fefefe"},
+                    {"lightness": 20}
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {"color": "#fefefe"},
+                    {"lightness": 17},
+                    {"weight": 1.2}
+                ]
+            }
+        ]
+
+    });
 
 
-});
+    // Info window content
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">The Glassworks</h1>'+
+        '<div id="bodyContent">'+
+        '<p>1c Montford Place<br> ' +
+        '<p>Kennington Green<br> ' +
+        '<p>London SE11 5DE<br> ' +
+        '<p>United Kingdom<br> '+
+        '</div>'+
+        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
 
     // Create a marker titile.
     var marker = new google.maps.Marker({
         map: map,
         position: pinPos,
-        title: 'Glassworks'
+        title: 'The Glassworks'
     });
 
-    /*
-    var pininfo = '<div id="content">' +
-        '<div id="siteNotice">' +
-        '</div>' +
-        '<h1 id="firstHeading"  class="firstHeading">Title</h1>' +
-        '<div id="bodyContent">' +
-        '<p>Content</p>' +
-        '</div>' +
-        '</div>';
-    google.maps.event.addListener(marker, 'click', function() {
-        infoWindow.setContent(pininfo);
-        infoWindow.open(map, marker);
+
+    // Open info window on click
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
     });
-    */
+
 
 }
