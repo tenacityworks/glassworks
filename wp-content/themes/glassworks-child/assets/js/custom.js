@@ -9,7 +9,8 @@ jQuery( document ).ready(function($) {
      * Home page slider
      * @author: Archie
      */
-    
+
+    /*
     $('.home-carousel').slick({
         autoplay: true,
         autoplaySpeed: 16000,
@@ -20,6 +21,14 @@ jQuery( document ).ready(function($) {
         adaptiveHeight: true,
         infinite: true
         //lazyLoad: demand
+    });
+    */
+    $('.home-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 16000,
+        mobileFirst: true,
+        adaptiveHeight: true,
+        infinite: true
     });
 
     
@@ -50,17 +59,7 @@ jQuery( document ).ready(function($) {
 
 
 
-
-
-    //
-
-
-
-    /*
-    $('span.gallery-toggle').click(function () {
-        $('footer').animate({height:"100%"}, 500);
-    });
-    */
+    
 
 
 

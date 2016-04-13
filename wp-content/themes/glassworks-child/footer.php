@@ -1,12 +1,6 @@
 </div><!-- Row End -->
 </div><!-- Container End -->
 
-<div class="full-width footer-widget">
-    <div class="row">
-        <?php dynamic_sidebar("Footer"); ?>
-    </div>
-</div>
-
 <footer class="full-width closed-menu" role="contentinfo">
     <div class="large-12 colunms">
         <div class="">
@@ -71,8 +65,7 @@
                         echo '</ul>';
 
                     }
-                }
-                ?>
+                } ?>
             </div>
         </div>
     </div>
