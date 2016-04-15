@@ -34,6 +34,8 @@ jQuery( document ).ready(function($) {
 
 
     /**
+     * Home Page Slider
+     *
      * Footer Click on Image  ->  Minimise Footer  -> Go to image in Slider
      * http://codepen.io/anon/pen/NPeLrd
      *
@@ -48,7 +50,8 @@ jQuery( document ).ready(function($) {
     });
 
 
-    $('.gallery-thumbnails ul li').click ( function() {
+    $('.gallery-thumbnails ul li').click ( function(e) {
+        //e.preventDefault();
 
         // get source
         var source = $(this).data("id");
@@ -57,9 +60,12 @@ jQuery( document ).ready(function($) {
         var destination = $('.home-carousel').find("[data-id='" + source + "']");
         //$('.gallery-thumbnails ul li').slickGoTo(destination);
         //$(this).slickGoTo(destination);
-        $(destination).attr('class').split(' ');
+        //$(destination).attr('class').split(' ');
         alert(destination);
 
+
+        // go to related image in the slider
+        //$('.home-carousel').slickGoTo( parseInt(destination) );
 
         // animate and close footer
         /*
@@ -89,61 +95,6 @@ jQuery( document ).ready(function($) {
      })
      */
     //});
-
-
-
-
-
-    /**
-     * Home page slider
-     * @author: Archie
-     */
-/*
-    $('.home-carousel').slick({
-        autoplay: true,
-        autoplaySpeed: 16000,
-        mobileFirst: true,
-        adaptiveHeight: true,
-        infinite: true
-    });
-*/
-
-
-
-    /**
-     * Link to homepage current slider
-     *
-     *
-     *
-
-    $(".slideshow-slider").on("afterChange", function(t, n, s) {
-        if (e) {
-            var r = n.currentSlide + 1;
-            $(".current-count").text(r);
-            var a = $(".slick-current").find(".slide-caption").html();
-            $(".slideshow-caption").html(a),
-                o.getAds({
-                    enableSingleRequest: !0,
-                    refreshExisting: !0
-                });
-            var l = window.location.pathname
-                , c = /\/slideshows\/detail\/(\d+)-([-|\w]+)\/(\d+)\//;
-            if (l.match(c)) {
-                //var d = l.replace(/\/slideshows\/detail\/(\d+)-([-|\w]+)\/(\d+)\//, "/slideshows/detail/$1-$2/" + r + "/");
-                var d = l.replace(/\/slideshows\/detail\/(\d+)-([-|\w]+)\/(\d+)\//, r + "/");
-                window.history.replaceState(null , null , d),
-                    ga("send", "pageview", d)
-            } else {
-                var d = l + r + "/";
-                window.history.replaceState(null , null , d),
-                    ga("send", "pageview", d)
-            }
-        }
-    });
-
-    */
-
-
 
 
 });
