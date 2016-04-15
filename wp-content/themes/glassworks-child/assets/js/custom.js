@@ -35,11 +35,9 @@ jQuery( document ).ready(function($) {
 
     /**
      * Footer Click on Image  ->  Minimise Footer  -> Go to image in Slider
-     * @author: Archie
-     */
-    /**
-     *
      * http://codepen.io/anon/pen/NPeLrd
+     *
+     * @author: Archie
      */
 
     $('.home-carousel').slick({
@@ -50,15 +48,17 @@ jQuery( document ).ready(function($) {
     });
 
     $('.gallery-thumbnails ul li').click ( function() {
-    //$('.gallery-thub-group > ul li a img').click( function() {
+    //$('.gallery-thumb-group > ul li a img').click( function() {
 
         // get source
         var source = $(this).data("id");
-        //alert (source);
+        alert (source);
 
         // get destination
         /*  var destination = $('.home-carousel').data('id'); */
-        $('.home-carousel[data-id="60"]').slickGoTo(source);
+        //$('.home-carousel[data-id="60"]').slickGoTo(source);
+
+        $('.home-carousel').slick('slickGoTo', parseInt(source));
 
 
         // animate and close footer
