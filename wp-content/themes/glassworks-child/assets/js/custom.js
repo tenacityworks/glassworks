@@ -47,27 +47,35 @@ jQuery( document ).ready(function($) {
         infinite: true
     });
 
+
     $('.gallery-thumbnails ul li').click ( function() {
-    //$('.gallery-thumb-group > ul li a img').click( function() {
 
         // get source
         var source = $(this).data("id");
-        alert (source);
 
         // get destination
-        /*  var destination = $('.home-carousel').data('id'); */
-        //$('.home-carousel[data-id="60"]').slickGoTo(source);
-
-        $('.home-carousel').slick('slickGoTo', parseInt(source));
+        var destination = $('.home-carousel').find("[data-id='" + source + "']");
+        //$('.gallery-thumbnails ul li').slickGoTo(destination);
+        //$(this).slickGoTo(destination);
+        $(destination).attr('class').split(' ');
+        alert(destination);
 
 
         // animate and close footer
-        //$(this).closest('footer').animate({height: "80px"}, 500);
-        //$(this).closest('footer').addClass("closed-menu");
-
+        /*
+        $(this).closest('footer').animate({height: "80px"}, 500);
+        $(this).closest('footer').addClass("closed-menu");
+        */
     });
 
 
+    /*
+    Mihai Version
+
+    var slideWhereToGo;
+    slideWhereToGo = $(".slick-track").find("[data-id='" + 64 + "']").parent().attr('data-slick-index');
+    $('.slick-slider').slickGoTo(slideWhereToGo);
+    */
 
 
     //$('.gallery-thumbnails ul li').each( function() {
