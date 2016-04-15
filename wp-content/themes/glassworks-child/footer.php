@@ -5,7 +5,7 @@
     <div class="large-12 colunms">
         <div class="">
 
-            <a href="<?php echo bloginfo('url'); ?>">
+            <a href="<?php bloginfo('url'); ?>">
                 <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" align="Glassworks Logo"/>
             </a>
 
@@ -36,7 +36,7 @@
                     $count = count($terms);
                     if ( $count > 0 ){
                         foreach ( $terms as $term ) {
-                            echo '<div class="gallery-thub-group">';
+                            echo '<div class="gallery-thumb-group">';
                             echo '<h2>' . $term->name . '</h2>';
                             echo '<ul>';
 
@@ -56,8 +56,8 @@
                             ?>
 
                             <?php while ($loop->have_posts()) : $loop->the_post();    // the loop ?>
-                                <li>
-                                    <a href="<?php echo get_home_url() . '/' . '#'; ?> ">
+                                <li class="foot-slide" data-id="<?php echo $post->ID; ?>">
+                                    <a href="javascript:void(0);  <?php //echo get_home_url() . '/' . '#'; ?> ">
                                         <?php echo pods_image( get_post_meta( $post->ID, 'gallery_image', true ), 'thumbnail' );    // do loop content ?>
                                     </a>
                                 </li>

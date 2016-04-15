@@ -661,31 +661,31 @@ footer .gallery-thumbnails-wrapper .gallery-thumbnails {
   display: inline-block;
   width: 100%;
 }
-/* line 329, ../scss/custom.scss */
-footer .gallery-thumbnails-wrapper .gallery-thumbnails h2 {
+/* line 331, ../scss/custom.scss */
+footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group h2 {
   color: black;
   display: block;
   padding: 60px 0 30px;
 }
-/* line 335, ../scss/custom.scss */
-footer .gallery-thumbnails-wrapper .gallery-thumbnails ul {
+/* line 337, ../scss/custom.scss */
+footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul {
   display: inline-block;
   margin: 0;
   width: 100%;
 }
-/* line 340, ../scss/custom.scss */
-footer .gallery-thumbnails-wrapper .gallery-thumbnails ul li {
+/* line 342, ../scss/custom.scss */
+footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li {
   float: left;
   list-style-type: none;
   margin: 10px 0 30px;
   width: 20%;
 }
-/* line 346, ../scss/custom.scss */
-footer .gallery-thumbnails-wrapper .gallery-thumbnails ul li a {
+/* line 348, ../scss/custom.scss */
+footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li a {
   text-decoration: none;
 }
-/* line 349, ../scss/custom.scss */
-footer .gallery-thumbnails-wrapper .gallery-thumbnails ul li a img {
+/* line 351, ../scss/custom.scss */
+footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li a img {
   display: block;
   float: none;
   margin: 0 auto;

@@ -91,7 +91,7 @@ function theme_enqueue_styles() {
 
     // conditional js loading
     if( is_page_template( 'page-contact.php' ) ) {
-        echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAflhKJKqKKZdJK75ybugRoBH9x7U1k1tM&amp;callback=initMap" async defer></script>';
+        echo '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAflhKJKqKKZdJK75ybugRoBH9x7U1k1tM&callback=initMap" async defer></script>';
         wp_enqueue_script( 'gmap', get_stylesheet_directory_uri() . '/assets/js/map.js', array( 'jquery' ));
     }
 

@@ -326,31 +326,34 @@ footer {
       display: inline-block;
       width: 100%;
 
-      h2 {
-        color: $black;
-        display: block;
-        padding: 60px 0 30px;
-      }
+      .gallery-thumb-group {
 
-      ul {
-        display: inline-block;
-        margin: 0;
-        width: 100%;
+        h2 {
+          color: $black;
+          display: block;
+          padding: 60px 0 30px;
+        }
 
-        li {
-          float: left;
-          list-style-type: none;
-          margin: 10px 0 30px;
-          width: 20%;
+        ul {
+          display: inline-block;
+          margin: 0;
+          width: 100%;
 
-          a{
-            text-decoration: none;
+          li {
+            float: left;
+            list-style-type: none;
+            margin: 10px 0 30px;
+            width: 20%;
 
-            img {
-              display: block;
-              float: none;
-              margin: 0 auto;
-              padding: 0 5px;
+            a{
+              text-decoration: none;
+
+              img {
+                display: block;
+                float: none;
+                margin: 0 auto;
+                padding: 0 5px;
+              }
             }
           }
         }

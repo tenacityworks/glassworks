@@ -6,10 +6,91 @@
 jQuery( document ).ready(function($) {
 
     /**
-     * Home page slider
+     * Footer Menu Toggle Switch
      * @author: Archie
      */
 
+    // slide up and add custom class
+    $("#gallery-toggle").click( function(e) {
+
+        e.preventDefault();
+
+        var theFooter = $('footer');        // store element in a variable to be resused
+
+        if ($(theFooter).hasClass("closed-menu") ) {
+            $(theFooter).animate({height: "100%"}, 500);
+            $(theFooter).removeClass("closed-menu");
+        } else {
+            $(theFooter).animate({height: "80px"}, 500);
+            $(theFooter).addClass("closed-menu");
+        }
+
+        $(this).toggleClass("closed-menu");
+        return false;
+
+    });
+
+
+
+
+    /**
+     * Footer Click on Image  ->  Minimise Footer  -> Go to image in Slider
+     * @author: Archie
+     */
+    /**
+     *
+     * http://codepen.io/anon/pen/NPeLrd
+     */
+
+    $('.home-carousel').slick({
+        arrows: true,
+        mobileFirst: true,
+        adaptiveHeight: true,
+        infinite: true
+    });
+
+    $('.gallery-thumbnails ul li').click ( function() {
+    //$('.gallery-thub-group > ul li a img').click( function() {
+
+        // get source
+        var source = $(this).data("id");
+        //alert (source);
+
+        // get destination
+        /*  var destination = $('.home-carousel').data('id'); */
+        $('.home-carousel[data-id="60"]').slickGoTo(source);
+
+
+        // animate and close footer
+        //$(this).closest('footer').animate({height: "80px"}, 500);
+        //$(this).closest('footer').addClass("closed-menu");
+
+    });
+
+
+
+
+    //$('.gallery-thumbnails ul li').each( function() {
+
+    /*
+     $('nav .slide-' + i + ' a').click(function() {
+
+     //$('.home-carousel').slickGoTo(i);
+
+     console.log( $(this) );             // debug this shit
+     })
+     */
+    //});
+
+
+
+
+
+    /**
+     * Home page slider
+     * @author: Archie
+     */
+/*
     $('.home-carousel').slick({
         autoplay: true,
         autoplaySpeed: 16000,
@@ -17,13 +98,16 @@ jQuery( document ).ready(function($) {
         adaptiveHeight: true,
         infinite: true
     });
+*/
+
 
 
     /**
      * Link to homepage current slider
      *
      *
-     */
+     *
+
     $(".slideshow-slider").on("afterChange", function(t, n, s) {
         if (e) {
             var r = n.currentSlide + 1;
@@ -49,32 +133,9 @@ jQuery( document ).ready(function($) {
         }
     });
 
+    */
 
 
-    /**
-     * Footer Menu Toggle Switch
-     * @author: Archie
-     */
-
-    // slide up and add custom class
-    $("#gallery-toggle").click( function(e) {
-
-        e.preventDefault();
-
-        var theFooter = $('footer');        // store element in a variable to be resused
-
-        if ($(theFooter).hasClass("closed-menu") ) {
-            $(theFooter).animate({height: "100%"}, 500);
-            $(theFooter).removeClass("closed-menu");
-        } else {
-            $(theFooter).animate({height: "80px"}, 500);
-            $(theFooter).addClass("closed-menu");
-        }
-
-        $(this).toggleClass("closed-menu");
-        return false;
-
-    });
 
 
 });

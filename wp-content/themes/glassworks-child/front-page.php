@@ -17,7 +17,7 @@
         <div class="home-carousel">
             <?php while($slider->have_posts()) : $slider->the_post(); ?>
                 <div class="home-gallery">
-                    <div class="gallery-photo">
+                    <div class="gallery-photo" data-id="<?php echo $post->ID; ?>">
                         <?php echo pods_image( get_post_meta( $post->ID, 'gallery_image', true ), 'original' );  ?>
                     </div>
                     <div class="gallery-description">
