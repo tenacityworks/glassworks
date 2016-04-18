@@ -6,8 +6,9 @@
 jQuery( document ).ready(function($) {
 
     /**
-     * Footer Menu Toggle Switch
+     * Footer Gallery Toggle Switch
      * @author: Archie
+     *
      */
 
     // slide up and add custom class
@@ -15,7 +16,12 @@ jQuery( document ).ready(function($) {
 
         e.preventDefault();
 
-        var theFooter = $('footer');        // store element in a variable to be resused
+        // display good elements
+        $('.gallery-thumbnails-wrapper').css("display", "block");
+        $('ul#menu-main-menu').toggleClass("hide-items");
+        $('span#mobi-trigger').toggleClass("hide-items");
+
+        var theFooter = $('footer');        // store element in a variable to be reused
 
         if ($(theFooter).hasClass("closed-menu") ) {
             $(theFooter).animate({height: "100%"}, 500);
@@ -30,6 +36,39 @@ jQuery( document ).ready(function($) {
 
     });
 
+
+
+
+    /**
+     * Footer Menu Toggle Switch
+     * @author: Archie
+     *
+     */
+
+    $("#mobi-trigger").click( function(e) {
+
+
+        //e.preventDefault();
+
+        var theFooter = $('footer');        // store element in a variable to be reused
+
+        // display good elements
+        $('ul#menu-main-menu').css("display", "inline-block");
+        $('footer #gallery-toggle').toggleClass("hide-items");
+        $('.gallery-thumbnails-wrapper').toggleClass("hide-items");
+
+        if ($(theFooter).hasClass("closed-menu") ) {
+            $(theFooter).animate({height: "100%"}, 500);
+            $(theFooter).removeClass("closed-menu");
+        } else {
+            $(theFooter).animate({height: "80px"}, 500);
+            $(theFooter).addClass("closed-menu");
+        }
+
+        $(this).toggleClass("closed-menu");
+        return false;
+
+    });
 
 
 

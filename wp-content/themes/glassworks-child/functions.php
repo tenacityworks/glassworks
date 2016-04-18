@@ -4,7 +4,30 @@
 /**
  * @author Archie
  * Clean up my dashboard
+ *
+ * @link https://codex.wordpress.org/Function_Reference/remove_meta_box
  */
+
+add_action( 'admin_init', function () {
+    // Removes the 'incoming links' metabox
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+    // Removes the 'plugins' metabox
+    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+    // Removes the 'WordPress News' metabox
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
+    // Removes the secondary metabox
+    remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+    // Removes the 'Quick Draft' metabox
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+    // Removes the 'Recent Drafts' metabox
+    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+    // Removes the 'Activity' metabox
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+    // Removes the 'At a Glance' metabox
+    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+    // Removes the 'Activity' metabox (since 3.8)
+    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal' );
+});
 
 
 
@@ -15,6 +38,7 @@
  * Clean up my dashboard
  *
  */
+
 function theme_typekit() {
     wp_enqueue_script( 'theme_typekit', '//use.typekit.net/grq8frp.js');
 }
@@ -26,6 +50,45 @@ function theme_typekit_inline() {
     <?php }
 }
 add_action( 'wp_head', 'theme_typekit_inline' );
+
+
+
+
+
+/**
+ * @author Archie
+ * Enqueue FontAwesome
+ *
+ */
+/*
+$get_the_url = 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css';
+
+$cdnIsUp = get_transient( 'cnd_is_up' );
+
+if ( $cdnIsUp ) {
+    $load_source = 'load_external_fontawesome';
+} else {
+    $cdn_response = wp_remote_get( $get_the_url );
+    if( is_wp_error( $cdn_response ) || wp_remote_retrieve_response_code($cdn_response) != '200' ) {
+        $load_source = 'load_local_fontawesome';
+    }
+    else {
+        $cdnIsUp = set_transient( 'cnd_is_up', true, MINUTE_IN_SECONDS * 20 );
+        $load_source = 'load_external_fontawesome';
+    }
+}
+
+function load_external_fontawesome() {
+    wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css');
+}
+
+function load_local_fontawesome() {
+    //wp_register_script('fontawesome', get_bloginfo('template_url').'/js/bootstrap.min.js', __FILE__, array('jquery'), 3.3, true);
+    wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css' );
+}
+
+add_action('wp_enqueue_styles', $load_source );
+*/
 
 
 
@@ -82,6 +145,7 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 
     // load css files
+    wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/css/font-awesome.css' );
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/css/style.css' );
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/assets/css/custom.css' );
 

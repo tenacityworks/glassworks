@@ -3,7 +3,7 @@
 
 <footer class="full-width closed-menu" role="contentinfo">
     <div class="large-12 colunms">
-        <div class="">
+        <div class="footer-container">
 
             <a href="<?php bloginfo('url'); ?>">
                 <img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" align="Glassworks Logo"/>
@@ -18,6 +18,7 @@
                     )
                 );
             ?>
+            <span id="mobi-trigger"></span>
 
             <?php if ( is_front_page() ) { ?>
                 <?php echo '<span id="gallery-toggle"></span>'; ?>
