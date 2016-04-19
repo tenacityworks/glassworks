@@ -39,7 +39,6 @@ function loadMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: pinPos,
         scrollwheel: false,
-        
         zoom: 16,
         styles: [
             {

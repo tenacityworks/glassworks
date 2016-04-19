@@ -86,21 +86,48 @@ jQuery( document ).ready(function($) {
         mobileFirst: true,
         adaptiveHeight: true,
         infinite: true
+        //swipe: true
     });
 
 
     $('.gallery-thumbnails ul li').click ( function(e) {
         //e.preventDefault();
 
-        // get source
         var source = $(this).data("id");
+        var destination = $('.home-carousel').find("[data-id='" + source + "']");
+
+
+        // get actual slide index
+        var slideIndex = destination.data("slick-index");
+
+        //$('.home-carousel').slick
+
+
+        //alert(source);
+        //alert(destination);
+
+        alert(destination.toSource());
+
+
+        //$('.slick-list').slickGoTo($(this).attr('index'));
+        //$('.slick-list').
+
+
+
+
+
+
+
+
+        // get source
+        //var source = $(this).data("id");
 
         // get destination
-        var destination = $('.home-carousel').find("[data-id='" + source + "']");
+        //var destination = $('.home-carousel').find("[data-id='" + source + "']");
         //$('.gallery-thumbnails ul li').slickGoTo(destination);
         //$(this).slickGoTo(destination);
         //$(destination).attr('class').split(' ');
-        alert(destination);
+        //alert(destination);
 
 
         // go to related image in the slider

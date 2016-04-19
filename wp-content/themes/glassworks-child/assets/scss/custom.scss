@@ -121,13 +121,13 @@ body {
     }
 
     .slick-prev:before,
-    .slick-next:before {
+    .slick-next:before {     border: 1px solid red;
       //color: red !important;
       color: $black;
       font-family: "FontAwesome";
       font-size: 3rem;
       font-weight: 100 !important;
-      position: absolute;
+      //position: absolute;
 
       &:hover {
         color: $grey;
