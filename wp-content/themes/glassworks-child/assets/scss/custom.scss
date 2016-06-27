@@ -18,10 +18,6 @@
   Body
 ========================================================================== */
 
-.hide-items {
-  display: none !important;
-}
-
 body {
   background: #fff !important;
   padding-top: 3rem;
@@ -121,25 +117,9 @@ body {
     }
 
     .slick-prev:before,
-    .slick-next:before {     border: 1px solid red;
-      //color: red !important;
-      color: $black;
-      font-family: "FontAwesome";
-      font-size: 3rem;
-      font-weight: 100 !important;
-      //position: absolute;
+    .slick-next:before {  color: red !important;
 
-      &:hover {
-        color: $grey;
-      }
-    }
 
-    .slick-prev:before {
-      content: "\f104";
-    }
-
-    .slick-next:before {
-      content: "\f105";
     }
 
   }
@@ -278,9 +258,6 @@ footer {
   overflow: scroll;
   width: 100%;
 
-  span#mobi-trigger {
-    display: none;
-  }
 
   &.full-width {
     padding-top: 25px !important;
@@ -298,12 +275,9 @@ footer {
     height: 100% !important;
   }
 
-  a {
-
-    img {
-      float: left;
-      margin-right: 50px;
-    }
+  img {
+    float: left;
+    margin-right: 50px;
   }
 
   ul#menu-main-menu {
@@ -334,6 +308,7 @@ footer {
 
   #gallery-toggle {
     color: $black;
+    font-family: 'glassworks_01' !important;
 
     &:hover {
       color: $grey;
@@ -342,16 +317,13 @@ footer {
 
   #gallery-toggle:before {
     content: '\0043';
-    font-family: 'glassworks_01' !important;
-    //content: "\f00a";
-    //font-family: "FontAwesome";
     cursor: pointer;
     display: block;
     float: right;
     font-size: 22px;
     position: absolute;
     right: 30px;
-    top: 22px;
+    top: 20px;
   }
 
 
@@ -423,71 +395,24 @@ footer {
     }
   }
 
+  /*
+  footer{
 
-  footer.full-width {
+    ul#menu-main-menu {
 
-    span#mobi-trigger {
-      color: $black;
-      cursor: pointer;
-      display: inline-block;
-      height: 30px;
-      width: 30px;
-
-      &:after {
-        font-size: 26px;
-        position: absolute;
-        content: "\f0c9";
-        font-family: "FontAwesome";
-        top: 22px;
-      }
-
-      &:hover {
-        color: $grey;
-      }
-    }
-
-    .footer-container {
-
-      a {
-        cursor: pointer;
+      li { border: 1px solid red;
         display: block;
-        margin: 0 auto;
-        width: 245px !important;
+        float: left;
+        width: 100%;
 
-        img {
-          display: block;
-          float: none;
-          margin: 0 auto;
-          max-width: 238px;
-          width: 100%;
+        a {
 
         }
       }
 
-      ul#menu-main-menu {         //display: none;
-        margin: 20px 0;
-
-        li {
-          /*
-          border: 1px solid red;
-          display: block;
-          float: left;
-          width: 100%;
-          */
-
-
-          padding: 5px 0px;
-          width: 100%;
-
-          a {
-
-          }
-        }
-      }
     }
-
-
   }
+  */
 
 }
 

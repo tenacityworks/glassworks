@@ -13,7 +13,7 @@ var long = $('.map-wrapper').data('data-long');
 
 
 
-jQuery( document ).ready(function($) {
+jQuery( window ).ready(function($) {
 
     /* load maps function */
     loadMap();
@@ -39,6 +39,7 @@ function loadMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: pinPos,
         scrollwheel: false,
+
         zoom: 16,
         styles: [
             {

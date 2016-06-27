@@ -404,45 +404,40 @@ body {
   Body
 ========================================================================== */
 /* line 21, ../scss/custom.scss */
-.hide-items {
-  display: none !important;
-}
-
-/* line 25, ../scss/custom.scss */
 body {
   background: #fff !important;
   padding-top: 3rem;
 }
-/* line 29, ../scss/custom.scss */
+/* line 25, ../scss/custom.scss */
 body .container {
   overflow: hidden;
   margin-bottom: 6rem;
 }
-/* line 34, ../scss/custom.scss */
+/* line 30, ../scss/custom.scss */
 body #content {
   border: 0;
   padding: 0;
 }
-/* line 38, ../scss/custom.scss */
+/* line 34, ../scss/custom.scss */
 body #content figure {
   margin: 0 0 30px 0;
   padding: 0;
 }
-/* line 44, ../scss/custom.scss */
+/* line 40, ../scss/custom.scss */
 body .content-block {
   padding: 20px 0;
 }
-/* line 48, ../scss/custom.scss */
+/* line 44, ../scss/custom.scss */
 body .index-card {
   border: none;
 }
-/* line 52, ../scss/custom.scss */
+/* line 48, ../scss/custom.scss */
 body .entry-content {
   display: inline-block;
   padding: 0 20px;
   width: 100%;
 }
-/* line 57, ../scss/custom.scss */
+/* line 53, ../scss/custom.scss */
 body .entry-content .eighty {
   display: inline-block;
   font-size: 14px;
@@ -450,13 +445,13 @@ body .entry-content .eighty {
   padding: 0 0 20px;
   width: 80%;
 }
-/* line 65, ../scss/custom.scss */
+/* line 61, ../scss/custom.scss */
 body .entry-content .eighty p,
 body .entry-content .eighty ul {
   font-size: inherit;
   margin: 0;
 }
-/* line 69, ../scss/custom.scss */
+/* line 65, ../scss/custom.scss */
 body .entry-content .eighty p li,
 body .entry-content .eighty ul li {
   list-style-type: none;
@@ -465,87 +460,70 @@ body .entry-content .eighty ul li {
 /* ==========================================================================
   Home page
 ========================================================================== */
-/* line 85, ../scss/custom.scss */
+/* line 81, ../scss/custom.scss */
 .home {
   overflow: hidden;
 }
-/* line 88, ../scss/custom.scss */
+/* line 84, ../scss/custom.scss */
 .home .container {
   height: calc(100vh - 180px);
   width: 100%;
 }
-/* line 95, ../scss/custom.scss */
+/* line 91, ../scss/custom.scss */
 .home #info-btn {
   border: 1px solid red;
   font-family: 'glassworks_01';
   content: '\0045';
   font-size: 26px;
 }
-/* line 101, ../scss/custom.scss */
+/* line 97, ../scss/custom.scss */
 .home .entry-content {
   max-width: 100%;
   max-height: 70%;
 }
-/* line 105, ../scss/custom.scss */
+/* line 101, ../scss/custom.scss */
 .home .entry-content .home-carousel {
   height: calc(100vh - 180px);
 }
-/* line 108, ../scss/custom.scss */
+/* line 104, ../scss/custom.scss */
 .home .entry-content .home-carousel .slick-list {
   height: inherit !important;
 }
-/* line 115, ../scss/custom.scss */
+/* line 111, ../scss/custom.scss */
 .home .entry-content .home-carousel .slick-list .slick-slide .gallery-photo img {
   margin: 0 auto;
 }
-/* line 124, ../scss/custom.scss */
+/* line 120, ../scss/custom.scss */
 .home .entry-content .slick-prev:before,
 .home .entry-content .slick-next:before {
-  border: 1px solid red;
-  color: black;
-  font-family: "FontAwesome";
-  font-size: 3rem;
-  font-weight: 100 !important;
-}
-/* line 132, ../scss/custom.scss */
-.home .entry-content .slick-prev:before:hover,
-.home .entry-content .slick-next:before:hover {
-  color: #999999;
-}
-/* line 137, ../scss/custom.scss */
-.home .entry-content .slick-prev:before {
-  content: "\f104";
-}
-/* line 141, ../scss/custom.scss */
-.home .entry-content .slick-next:before {
-  content: "\f105";
+  color: red !important;
 }
 
 /* ==========================================================================
   Blog List
 ========================================================================== */
-/* line 165, ../scss/custom.scss */
+/* line 145, ../scss/custom.scss */
 .blog #content header {
   margin-bottom: 1.25rem;
 }
-/* line 169, ../scss/custom.scss */
+/* line 149, ../scss/custom.scss */
 .blog #content h2 {
   color: #999999;
   margin-bottom: 0.25rem;
 }
-/* line 173, ../scss/custom.scss */
+/* line 153, ../scss/custom.scss */
 .blog #content h2 a {
   color: #999999;
 }
-/* line 176, ../scss/custom.scss */
+/* line 156, ../scss/custom.scss */
 .blog #content h2 a:hover {
   color: black;
 }
-/* line 182, ../scss/custom.scss */
+/* line 162, ../scss/custom.scss */
 .blog #content .index-card {
   margin-bottom: 0;
 }
-/* line 191, ../scss/custom.scss */
+/* line 171, ../scss/custom.scss */
 .blog #content #post-nav .post-previous a,
 .blog #content #post-nav .post-next a {
   color: #999999;
@@ -554,7 +532,7 @@ body .entry-content .eighty ul li {
   font-size: 16px;
   text-transform: uppercase;
 }
-/* line 198, ../scss/custom.scss */
+/* line 178, ../scss/custom.scss */
 .blog #content #post-nav .post-previous a:hover,
 .blog #content #post-nav .post-next a:hover {
   color: black;
@@ -563,25 +541,25 @@ body .entry-content .eighty ul li {
 /* ==========================================================================
   Blog Single
 ========================================================================== */
-/* line 216, ../scss/custom.scss */
+/* line 196, ../scss/custom.scss */
 .single-post #content {
   overflow: hidden;
 }
-/* line 222, ../scss/custom.scss */
+/* line 202, ../scss/custom.scss */
 .single-post #content .eighty p,
 .single-post #content .eighty ul {
   margin: 0 0 20px;
 }
-/* line 227, ../scss/custom.scss */
+/* line 207, ../scss/custom.scss */
 .single-post #content p.post-info {
   font-size: 16px;
   text-transform: uppercase;
 }
-/* line 232, ../scss/custom.scss */
+/* line 212, ../scss/custom.scss */
 .single-post #content figure {
   margin: 20px 0 !important;
 }
-/* line 235, ../scss/custom.scss */
+/* line 215, ../scss/custom.scss */
 .single-post #content figure img {
   height: auto;
   max-width: 90%;
@@ -591,7 +569,7 @@ body .entry-content .eighty ul li {
 /* ==========================================================================
   Contact Us
 ========================================================================== */
-/* line 252, ../scss/custom.scss */
+/* line 232, ../scss/custom.scss */
 #map {
   display: inline-block;
   height: 400px;
@@ -603,12 +581,12 @@ body .entry-content .eighty ul li {
 /* ==========================================================================
   Footer
 ========================================================================== */
-/* line 268, ../scss/custom.scss */
+/* line 248, ../scss/custom.scss */
 .footer-widget {
   background-color: #fff !important;
 }
 
-/* line 273, ../scss/custom.scss */
+/* line 253, ../scss/custom.scss */
 footer {
   bottom: 0;
   height: 80px;
@@ -618,43 +596,39 @@ footer {
   width: 100%;
   /* Gallery Thumbnails */
 }
-/* line 281, ../scss/custom.scss */
-footer span#mobi-trigger {
-  display: none;
-}
-/* line 285, ../scss/custom.scss */
+/* line 262, ../scss/custom.scss */
 footer.full-width {
   padding-top: 25px !important;
   padding-right: 20px !important;
   padding-bottom: 25px !important;
   padding-left: 20px !important;
 }
-/* line 292, ../scss/custom.scss */
+/* line 269, ../scss/custom.scss */
 footer.closed-menu {
   height: 80px;
   overflow: hidden;
 }
-/* line 297, ../scss/custom.scss */
+/* line 274, ../scss/custom.scss */
 footer.open-menu {
   height: 100% !important;
 }
-/* line 303, ../scss/custom.scss */
-footer a img {
+/* line 278, ../scss/custom.scss */
+footer img {
   float: left;
   margin-right: 50px;
 }
-/* line 309, ../scss/custom.scss */
+/* line 283, ../scss/custom.scss */
 footer ul#menu-main-menu {
   display: inline-block;
   float: left;
 }
-/* line 313, ../scss/custom.scss */
+/* line 287, ../scss/custom.scss */
 footer ul#menu-main-menu li {
   float: left;
   list-style-type: none;
   padding: 0 20px;
 }
-/* line 318, ../scss/custom.scss */
+/* line 292, ../scss/custom.scss */
 footer ul#menu-main-menu li a {
   color: #999999;
   font-size: 16px;
@@ -663,59 +637,59 @@ footer ul#menu-main-menu li a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 329, ../scss/custom.scss */
+/* line 303, ../scss/custom.scss */
 footer ul#menu-main-menu li > a:hover, footer ul#menu-main-menu li.current-menu-item > a, footer ul#menu-main-menu li.current_page_parent > a {
   color: black;
 }
-/* line 335, ../scss/custom.scss */
+/* line 309, ../scss/custom.scss */
 footer #gallery-toggle {
   color: black;
+  font-family: 'glassworks_01' !important;
 }
-/* line 338, ../scss/custom.scss */
+/* line 313, ../scss/custom.scss */
 footer #gallery-toggle:hover {
   color: #999999;
 }
-/* line 343, ../scss/custom.scss */
+/* line 318, ../scss/custom.scss */
 footer #gallery-toggle:before {
   content: '\0043';
-  font-family: 'glassworks_01' !important;
   cursor: pointer;
   display: block;
   float: right;
   font-size: 22px;
   position: absolute;
   right: 30px;
-  top: 22px;
+  top: 20px;
 }
-/* line 361, ../scss/custom.scss */
+/* line 333, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails {
   display: inline-block;
   width: 100%;
 }
-/* line 367, ../scss/custom.scss */
+/* line 339, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group h2 {
   color: black;
   display: block;
   padding: 60px 0 30px;
 }
-/* line 373, ../scss/custom.scss */
+/* line 345, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul {
   display: inline-block;
   margin: 0;
   width: 100%;
 }
-/* line 378, ../scss/custom.scss */
+/* line 350, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li {
   float: left;
   list-style-type: none;
   margin: 10px 0 30px;
   width: 20%;
 }
-/* line 384, ../scss/custom.scss */
+/* line 356, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li a {
   text-decoration: none;
 }
-/* line 387, ../scss/custom.scss */
+/* line 359, ../scss/custom.scss */
 footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li a img {
   display: block;
   float: none;
@@ -727,69 +701,37 @@ footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul l
   Responsive CSS
 ========================================================================== */
 @media screen and (max-width: 900px) {
-  /* line 416, ../scss/custom.scss */
+  /* line 388, ../scss/custom.scss */
   body .entry-content .eighty {
     width: 100%;
   }
-  /* line 419, ../scss/custom.scss */
+  /* line 391, ../scss/custom.scss */
   body .entry-content .eighty #map {
     max-width: 100%;
   }
 
-  /* line 429, ../scss/custom.scss */
-  footer.full-width span#mobi-trigger {
-    color: black;
-    cursor: pointer;
-    display: inline-block;
-    height: 30px;
-    width: 30px;
+  /*
+  footer{
+
+    ul#menu-main-menu {
+
+      li { border: 1px solid red;
+        display: block;
+        float: left;
+        width: 100%;
+
+        a {
+
+        }
+      }
+
+    }
   }
-  /* line 436, ../scss/custom.scss */
-  footer.full-width span#mobi-trigger:after {
-    font-size: 26px;
-    position: absolute;
-    content: "\f0c9";
-    font-family: "FontAwesome";
-    top: 22px;
-  }
-  /* line 444, ../scss/custom.scss */
-  footer.full-width span#mobi-trigger:hover {
-    color: #999999;
-  }
-  /* line 451, ../scss/custom.scss */
-  footer.full-width .footer-container a {
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-    width: 245px !important;
-  }
-  /* line 457, ../scss/custom.scss */
-  footer.full-width .footer-container a img {
-    display: block;
-    float: none;
-    margin: 0 auto;
-    max-width: 238px;
-    width: 100%;
-  }
-  /* line 467, ../scss/custom.scss */
-  footer.full-width .footer-container ul#menu-main-menu {
-    margin: 20px 0;
-  }
-  /* line 470, ../scss/custom.scss */
-  footer.full-width .footer-container ul#menu-main-menu li {
-    /*
-    border: 1px solid red;
-    display: block;
-    float: left;
-    width: 100%;
-    */
-    padding: 5px 0px;
-    width: 100%;
-  }
+  */
 }
 @media screen and (max-width: 480px) {
   /* Footer */
-  /* line 513, ../scss/custom.scss */
+  /* line 438, ../scss/custom.scss */
   footer .gallery-thumbnails-wrapper .gallery-thumbnails .gallery-thumb-group ul li {
     width: 33.333%;
   }
